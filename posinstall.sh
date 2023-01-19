@@ -10,6 +10,7 @@ PACKAGES_INSTALL=(
   discord
   firefox-developer-edition
   fish
+  fisher
   fzf
   git
   go
@@ -18,9 +19,11 @@ PACKAGES_INSTALL=(
   nodejs
   npm
   qbittorrent
-  ran
-  ger
+  ranger
   spotify
+  tig
+  tmux
+  tree
   unzip
   unrar
   vlc
