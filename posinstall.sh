@@ -18,7 +18,8 @@ PACKAGES_INSTALL=(
   nodejs
   npm
   qbittorrent
-  ranger
+  ran
+  ger
   spotify
   unzip
   unrar
@@ -36,3 +37,4 @@ mkdir "$DOWNLOAD_DIRECTORY"
 ## bmenu
 ## docker
 ## yay
+## kubernets
