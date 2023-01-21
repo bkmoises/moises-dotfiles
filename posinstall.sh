@@ -9,8 +9,6 @@ PACKAGES_INSTALL=(
   curl
   discord
   firefox-developer-edition
-  fish
-  fisher
   fzf
   git
   go
@@ -28,6 +26,7 @@ PACKAGES_INSTALL=(
   unrar
   vlc
   wget
+  zsh
 )
 
 
