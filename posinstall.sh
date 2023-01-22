@@ -7,7 +7,9 @@ DOWNLOAD_DIRECTORY="$HOME/Downloads/files"
 PACKAGES_INSTALL=(
   bpytop
   curl
+  clipit
   discord
+  dmenu
   firefox-developer-edition
   fzf
   git
