@@ -7,7 +7,6 @@ DOWNLOAD_DIRECTORY="$HOME/Downloads/files"
 PACKAGES_INSTALL=(
   bpytop
   curl
-  clipit
   discord
   dmenu
   firefox-developer-edition
@@ -16,8 +15,11 @@ PACKAGES_INSTALL=(
   neovim
   nodejs
   npm
+  python3
+  python-pip
   qbittorrent
   ranger
+  rofi-greenclip
   snapd
   spotify
   tig
@@ -68,5 +70,8 @@ systemctl start snapd
 
 sudo snap install spotify
 
+rm -rf $DOWNLOAD_DIRECTORY
+
 ## docker
 ## kubernets
+## pip install spotify-cli-linux
