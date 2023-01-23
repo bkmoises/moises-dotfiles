@@ -18,6 +18,7 @@ PACKAGES_INSTALL=(
   npm
   qbittorrent
   ranger
+  snapd
   spotify
   tig
   tmux
@@ -54,13 +55,18 @@ cd $DOWNLOAD_DIRECTORY/
 makepkg -si --noconfirm
 
 for package in ${PACKAGES_INSTALL[@]}; do
-  if ! yay -Qet | grep -q $package;
+  if ! yay -Qet | grep -q $package; then
     yay -S $package --noconfirm
   else
     echo "$package - Já instalado"
   fi
 done
 
+yay -Syyuu --noconfirm
+
+systemctl start snapd
+
+sudo snap install spotify
 
 ## docker
 ## kubernets
