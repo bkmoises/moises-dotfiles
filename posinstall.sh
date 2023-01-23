@@ -30,7 +30,7 @@ PACKAGES_INSTALL=(
 )
 
 ## Remover travas do pacman
-sudo rm /var/lib/pacman/db.lck
+sudo rm /var/lib/pacman/db.lck 2> /dev/null
 
 ## Instalar o pacote git
 if ! pacman -Qet | grep -q git; then
@@ -43,7 +43,7 @@ fi
 if ! pacman -Qet | grep -q git; then
   sudo pacman -S go --noconfirm
 else
-  echo "Go - Instalado"
+  echo "go - Já instalado"
 fi
 
 mkdir "$DOWNLOAD_DIRECTORY" 2> /dev/null
@@ -53,11 +53,14 @@ git clone $URL_YAY $DOWNLOAD_DIRECTORY 2> /dev/null
 cd $DOWNLOAD_DIRECTORY/
 makepkg -si --noconfirm
 
+for package in ${PACKAGES_INSTALL[@]}; do
+  if ! yay -Qet | grep -q $package;
+    yay -S $package --noconfirm
+  else
+    echo "$package - Já instalado"
+  fi
+done
 
 
-## bmenu
 ## docker
-## yay
 ## kubernets
-#
-## go
