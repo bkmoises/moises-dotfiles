@@ -31,6 +31,7 @@ PACKAGES_INSTALL=(
   tree
   unzip
   unrar
+  urxvt-unicode
   vlc
   wget
 )
