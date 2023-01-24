@@ -11,7 +11,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "tokyonight-moon"
+lvim.colorscheme = "github_*"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -243,8 +243,9 @@ lvim.plugins = {
   },
   { 'pechorin/any-jump.vim' },
   { 'github/copilot.vim' },
-  { 'L3MON4D3/LuaSnip' },
   { 'norcalli/nvim-colorizer.lua' },
+  { "projekt0n/github-nvim-theme" },
+  { "luochen1990/rainbow" }
 
 }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
