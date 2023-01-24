@@ -2,6 +2,7 @@
 #----------------------------------------- VARIÁVEIS -----------------------------------------#
 URL_YAY="https://aur.archlinux.org/yay.git"
 URL_OMF="https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install"
+URL_ASDF="https://github.com/asdf-vm/asdf.git"
 URL_QBIT_THEME="https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme"
 DOWNLOAD_DIRECTORY="$HOME/Downloads/files"
 
@@ -52,9 +53,12 @@ else
   echo "go - Já instalado"
 fi
 
-mkdir "$DOWNLOAD_DIRECTORY" 2> /dev/null
+# Criar diretório local para armazenar arquviso de instalação
+mkdir "$DOWNLOAD_DIRECTORY"
 
-git clone $URL_YAY $DOWNLOAD_DIRECTORY 2> /dev/null
+# Download de repositórios
+git clone $URL_YAY $DOWNLOAD_DIRECTORY
+git clone $URL_ASDF ~/.asdf --branch v0.11.1
 wget -P $URL_QBIT_THEME $DOWNLOAD_DIRECTORY
 
 cd $DOWNLOAD_DIRECTORY/
@@ -80,6 +84,8 @@ pip install spotify-cli-linux
 curl $URL_OMF | fish
 
 exec ./fish_plugins_install.sh
+
+mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 
 rm -rf $DOWNLOAD_DIRECTORY
 
