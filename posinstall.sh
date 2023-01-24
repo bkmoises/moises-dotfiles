@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 #----------------------------------------- VARIÁVEIS -----------------------------------------#
 URL_YAY="https://aur.archlinux.org/yay.git"
+URL_OMF="https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install"
 URL_QBIT_THEME="https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme"
-
 DOWNLOAD_DIRECTORY="$HOME/Downloads/files"
 
 PACKAGES_INSTALL=(
   bpytop
+  cargo
   curl
   discord
   dmenu
   firefox-developer-edition
+  fish
+  fisher
   fzf
   make
   neovim
@@ -23,7 +26,6 @@ PACKAGES_INSTALL=(
   rofi-greenclip
   rxvt
   snapd
-  spotify
   tig
   tmux
   tree
@@ -31,7 +33,6 @@ PACKAGES_INSTALL=(
   unrar
   vlc
   wget
-  zsh
 )
 
 ## Remover travas do pacman
@@ -75,6 +76,10 @@ systemctl start snapd
 sudo snap install spotify
 
 pip install spotify-cli-linux
+
+curl $URL_OMF | fish
+
+exec ./fish_plugins_install.sh
 
 rm -rf $DOWNLOAD_DIRECTORY
 
