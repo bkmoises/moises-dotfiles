@@ -177,7 +177,7 @@ bindsym $mod+Ctrl+k resize shrink height 5 px or 5 ppt
 
 ## TODO
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+q kill
