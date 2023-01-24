@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #----------------------------------------- VARIÁVEIS -----------------------------------------#
 URL_YAY="https://aur.archlinux.org/yay.git"
+URL_QBIT_THEME="https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme"
 
 DOWNLOAD_DIRECTORY="$HOME/Downloads/files"
 
@@ -20,6 +21,7 @@ PACKAGES_INSTALL=(
   qbittorrent
   ranger
   rofi-greenclip
+  rxvt
   snapd
   spotify
   tig
@@ -52,9 +54,11 @@ fi
 mkdir "$DOWNLOAD_DIRECTORY" 2> /dev/null
 
 git clone $URL_YAY $DOWNLOAD_DIRECTORY 2> /dev/null
+wget -P $URL_QBIT_THEME $DOWNLOAD_DIRECTORY
 
 cd $DOWNLOAD_DIRECTORY/
 makepkg -si --noconfirm
+mv *qbtheme* /opt
 
 for package in ${PACKAGES_INSTALL[@]}; do
   if ! yay -Qet | grep -q $package; then
@@ -70,8 +74,10 @@ systemctl start snapd
 
 sudo snap install spotify
 
+pip install spotify-cli-linux
+
 rm -rf $DOWNLOAD_DIRECTORY
+
 
 ## docker
 ## kubernets
-## pip install spotify-cli-linux
