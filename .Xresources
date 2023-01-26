@@ -26,7 +26,8 @@ URxvt.font: xft:FiraCode Nerd Font:size=10:hinting=true,xft:JetBrainsMono Nerd F
 *.color9: #ff7f01
 ! Indicador da linha
 *.color10: #1ECBE1
-*.color11: #EBCB8B
+! Pendencia Git
+*.color11: #4B87E7
 ! Diretórios
 *.color12: #961EE1
 ! Midia
