@@ -1,55 +1,55 @@
-URxvt.font: xft:FiraCode Nerd Font:size=10:hinting=true,xft:JetBrainsMono Nerd Font:size=10:hinting=true,xft:FiraMono Nerd Font:size=10:hinting=true,xft:Cousine Nerd Font:size=10:hinting=true,xft:Fantasque Sans Mono Nerd Font:size=10:hinting=true
+!!URxvt Appearance
+URxvt.font:                    xft:FiraCode Nerd Font:size=10:hinting=true,xft:JetBrainsMono Nerd Font:size=10:hinting=true,xft:FiraMono Nerd Font:size=10:hinting=true,xft:Cousine Nerd Font:size=10:hinting=true,xft:Fantasque Sans Mono Nerd Font:size=10:hinting=true
 
-*.foreground:   #D8DEE9
-*.background:   #2E3440 
-*.cursorColor:  #4BD5E7
-*fading: 25
-*fadeColor: #4C566A
+*.foreground:                  #D8DEE9
+*.background:                  #2E3440 
+*.cursorColor:                 #4BD5E7
+*fading:                       25
+*fadeColor:                    #4C566A
 
 ! Validar
-*.color0: #3B4252 
+*.color0:                      #3B4252 
 ! comando incorreto e stderr
-*.color1: #ff7f01
+*.color1:                      #ff7f01
 ! Texto em detaque
-*.color2: #1ECBE1
+*.color2:                      #1ECBE1
 ! Seletor Tmux
-*.color3: #D5E748
+*.color3:                      #D5E748
 ! Comando correto
-*.color4: #CBE11E
+*.color4:                      #CBE11E
 ! Midia
-*.color5: #6AE11E
+*.color5:                      #6AE11E
 ! Caminho de diretório
-*.color6: #1EE196
-*.color7: #E5E9F0
-*.color8: #4C566A
+*.color6:                      #1EE196
+*.color7:                      #E5E9F0
+*.color8:                      #4C566A
 ! comando incorreto e stderr
-*.color9: #ff7f01
+*.color9:                      #ff7f01
 ! Indicador da linha
-*.color10: #1ECBE1
+*.color10:                     #1ECBE1
 ! Pendencia Git
-*.color11: #4B87E7
+*.color11:                     #4B87E7
 ! Diretórios
-*.color12: #961EE1
+*.color12:                     #961EE1
 ! Midia
-*.color13: #6AE11E
+*.color13:                     #6AE11E
 ! Diretório atual
-*.color14: #E11ECB
-*.color15: #b3ff00
+*.color14:                     #E11ECB
+*.color15:                     #b3ff00
 
-!! URxvt Appearance
-URxvt.letterSpace: 0
-URxvt.cursorBlink: true
-URxvt.lineSpace: 0
-URxvt.scrollBar: false
-URxvt.scrollBar_right: false
-URxvt.url.select.underline: true
-URxvt.url.select.launcher: /usr/bin/xdg-open 
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-URxvt.saveline: 2048
-URxvt.geometry: 400x400
-URxvt.internalBorder: 8
-URxvt.urgentOnBell: true
-!URxvt.depth: 24
+URxvt.letterSpace:             0
+URxvt.cursorBlink:             true
+URxvt.lineSpace:               0
+URxvt.scrollBar:               false
+URxvt.scrollBar_right:         false
+URxvt.url.select.underline:    true
+URxvt.url.select.launcher:     /usr/bin/xdg-open 
+URxvt.keysym.Shift-Control-V:  eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:  eval:selection_to_clipboard
+URxvt.iso14755:                false
+URxvt.iso14755_52:             false
+URxvt.saveline:                2048
+URxvt.geometry:                400x400
+URxvt.internalBorder:          8
+URxvt.urgentOnBell:            true
+URxvt.depth:                   24
