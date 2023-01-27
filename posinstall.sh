@@ -34,6 +34,7 @@ PACKAGES_INSTALL=(
   urxvt-unicode
   vlc
   wget
+  xclip
 )
 
 ## Remover travas do pacman
