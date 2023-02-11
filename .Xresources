@@ -2,7 +2,7 @@
 URxvt.font:                    xft:FiraCode Nerd Font:size=10:hinting=true,xft:JetBrainsMono Nerd Font:size=10:hinting=true,xft:FiraMono Nerd Font:size=10:hinting=true,xft:Cousine Nerd Font:size=10:hinting=true,xft:Fantasque Sans Mono Nerd Font:size=10:hinting=true
 
 *.foreground:                  #D8DEE9
-*.background:                  #2E3440 
+*.background:                  #0d1117 
 *.cursorColor:                 #4BD5E7
 *fading:                       25
 *fadeColor:                    #4C566A
