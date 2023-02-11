@@ -44,7 +44,7 @@ sudo rm /var/lib/pacman/db.lck 2> /dev/null
 if ! pacman -Qet | grep -q git; then
   sudo pacman -S git --noconfirm
 else
-  echo "Git - Instalado"
+  echo "Git - Já Instalado"
 fi
 
 ## Instalar o pacote go
@@ -86,7 +86,3 @@ curl $URL_OMF | fish
 exec ./fish_plugins_install.sh
 
 rm -rf $DOWNLOAD_DIRECTORY
-
-
-## docker
-## kubernets
