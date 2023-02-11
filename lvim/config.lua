@@ -22,6 +22,7 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<A-h>"] = ":bnext<cr>"
 lvim.keys.normal_mode["<A-l>"] = ":bprev<cr>"
+lvim.keys.normal_mode["<C-t>"] = ":FloatermNew --height=0.6 --width=0.4 --wintype=float --name=floaterm1<cr>"
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -245,8 +246,8 @@ lvim.plugins = {
   { 'github/copilot.vim' },
   { 'norcalli/nvim-colorizer.lua' },
   { "projekt0n/github-nvim-theme" },
-  { "luochen1990/rainbow" }
-
+  { "luochen1990/rainbow" },
+  { "voldikss/vim-floaterm" },
 }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
