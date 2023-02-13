@@ -68,7 +68,8 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-
+lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -243,11 +244,26 @@ lvim.plugins = {
     "jiangmiao/auto-pairs"
   },
   { 'pechorin/any-jump.vim' },
-  { 'github/copilot.vim' },
+  { 'github/copilot.vim',
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup {
+          plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+        }
+      end, 100)
+    end, },
+  { "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  },
   { 'norcalli/nvim-colorizer.lua' },
   { "projekt0n/github-nvim-theme" },
   { "luochen1990/rainbow" },
   { "voldikss/vim-floaterm" },
+  { "mg979/vim-visual-multi" }
 }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
