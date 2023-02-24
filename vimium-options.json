@@ -9,7 +9,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "# Insert your preferred key mappings here.\nmap = Marks.activateGotoMode",
+  "keyMappings": "# Jump to mark\nmap [ Marks.activateGotoMode\n\n# Jump to last visited tab\nmap I visitPreviousTab\n\n# Hover button link\nmap e LinkHints.activateMode action=hover\n\n# Add an additional mapping for Escape:\nmapkey <c-c> <c-[>\n\n# Hard Reload\nmap R reload hard\n\n# Ohers Shortcuts\n# map s LinkHints.activateMode action=focus\n# map a LinkHints.activateMode action=copy-text\n# map s Vomnibar.activate keyword=g\n# map w Vomnibar.activate keyword=w",
   "linkHintCharacters": "sadfjklexmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
