@@ -397,13 +397,15 @@ exec --no-startup-id dex --autostart --environment i3
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
+# 
+exec_always --no-startup-id ~/.config/i3/scripts/hdmi-switch.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
 exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+# exec --no-startup-id xset s 480 dpms 600 600 600
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -419,6 +421,9 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 
 # Desktop notifications
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+
+bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+
 # alternative if you installed aside with XFCE4:
 # exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
@@ -590,27 +595,57 @@ exec --no-startup-id greenclip daemon>/dev/null
 bindsym $mod+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
 		-config ~/.config/rofi/rofidmenu.rasi
 
-#####################################
-#             Spotify CLI           #
-#####################################
+#-----------------------------------#
+#              Spoi3fy              #
+#-----------------------------------#
 
-bindsym $mod+s mode "spotify"; exec "notify-send 'Spotify Mode'; exec echo 'Spotify  ◼' > /tmp/spotify.log"
+# bindsym to enter spotify mode, change the key combination to suit you better.
+bindsym $mod+s mode "spotify"; exec "notify-send 'Spotify Mode'
+
+# Spotify mode settings
 mode "spotify" {
 
-bindsym k exec "spotifycli --playpause && spotifycli --status > /tmp/spotify.log"
-bindsym l exec "spotifycli --next && spotifycli --status > /tmp/spotify.log"
-bindsym h exec "spotifycli --prev && spotifycli --status > /tmp//spotify.log"
+# Pause, resume and change tracks:
+bindsym k exec spotifycli --playpause
+bindsym l exec spotifycli --next
+bindsym h exec spotifycli --prev
 
-# bindsym k exec "spotifycli --playpause && spotifycli --statusshort > /var/log/scripts/spotify.log"
-# bindsym h exec "spotifycli --next && spotifycli --statusshort > /var/log/scripts/spotify.log"
-# bindsym l exec "spotifycli --prev && spotifycli --statusshort > /var/log/scripts/spotify.log"
+# alternatively, you can use the cursor keys:
+# bindsym Left exec spotifycli --prev
+# bindsym Right exec spotifycli --next
+# bindsym Up exec spotifycli --playpause
+# bindsym Down exec spotifycli --playpause
 
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym q exec --no-startup-id pkill spotify
+# Open spotify shurtcut
 bindsym o exec spotify
 
-        # exit spotify mode Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym Ctrl+c mode "default"
+# Focus spotify workspace
+bindsym f [class="^Spotify$"] focus
+
+# Kill spotify window
+bindsym q exec pkill spotify
+
+    # exit spotify mode Enter, Escape or Ctrl+C
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym Ctrl+c mode "default"
 }
+
+
+# OLDER CONFIG
+# bindsym $mod+s mode "spotify"; exec "notify-send 'Spotify Mode'; exec echo 'Spotify  ◼' > /tmp/spotify.log"
+
+# mode "spotify" {
+
+# bindsym k exec "spotifycli --playpause && spotifycli --status > /tmp/spotify.log"
+# bindsym l exec "spotifycli --next && spotifycli --status > /tmp/spotify.log"
+# bindsym h exec "spotifycli --prev && spotifycli --status > /tmp//spotify.log"
+
+# bindsym q exec --no-startup-id pkill spotify
+# bindsym o exec spotify
+
+#         # exit spotify mode Enter or Escape
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+#         bindsym Ctrl+c mode "default"
+# }
