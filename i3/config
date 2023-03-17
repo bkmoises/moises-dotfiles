@@ -398,7 +398,7 @@ exec --no-startup-id dex --autostart --environment i3
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
 # 
-exec_always --no-startup-id ~/.config/i3/scripts/hdmi-switch.sh
+exec_always --no-startup-id ~/.config/i3/scripts/hdmi-switch.sh && echo 1 | sudo tee /sys/class/drm/card0-HDMI-A-1/status
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
