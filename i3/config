@@ -617,8 +617,7 @@ bindsym h exec spotifycli --prev
 # bindsym Down exec spotifycli --playpause
 
 # Open spotify shurtcut
-bindsym o exec spotify
-
+bindsym o exec --no-startup-id ~/.config/i3/scripts/spotify_open.sh
 # Focus spotify workspace
 bindsym f [class="^Spotify$"] focus
 
