@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-if (cat /sys/class/drm/card0-HDMI-A-1/status | grep "disconnected"); then
+if (cat /sys/class/drm/card0-HDMI-A-1/status | grep "disconnected" > /dev/null); then
   # Altera a configuração de vídeo para usar o Notebook
   pacmd set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo
   xrandr --output HDMI1 --off
