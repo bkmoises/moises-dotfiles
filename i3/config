@@ -291,7 +291,6 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 bindsym $mod+F1 exec /usr/bin/firefox-developer-edition
 bindsym $mod+F2 exec /usr/bin/vlc
 bindsym $mod+e exec /usr/bin/thunar
-bindsym $mod+t exec /usr/bin/qbittorrent
 
 bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
@@ -631,20 +630,28 @@ bindsym q exec pkill spotify
 }
 
 
-# OLDER CONFIG
-# bindsym $mod+s mode "spotify"; exec "notify-send 'Spotify Mode'; exec echo 'Spotify  ◼' > /tmp/spotify.log"
+#-----------------------------------#
+#            qBittorrent            #
+#-----------------------------------#
 
-# mode "spotify" {
 
-# bindsym k exec "spotifycli --playpause && spotifycli --status > /tmp/spotify.log"
-# bindsym l exec "spotifycli --next && spotifycli --status > /tmp/spotify.log"
-# bindsym h exec "spotifycli --prev && spotifycli --status > /tmp//spotify.log"
+# bindsym to enter torrent mode, change the key combination to suit you better.
+bindsym $mod+t mode "Torrent"; exec "notify-send 'Torrent Mode'
 
-# bindsym q exec --no-startup-id pkill spotify
-# bindsym o exec spotify
+# Torrent mode settings
+mode "Torrent" {
 
-#         # exit spotify mode Enter or Escape
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-#         bindsym Ctrl+c mode "default"
-# }
+# Open torrent shurtcut
+bindsym o exec --no-startup-id /usr/bin/qbittorrent
+# Focus torrent workspace
+# bindsym f [class="^qbittorrent$"] focus
+# bindsym f i3-msg [class="qbittorrent"] focus
+
+# Kill torrent window
+bindsym q exec pkill qbittorrent
+
+    # exit torrent mode Enter, Escape or Ctrl+C
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym Ctrl+c mode "default"
+}
