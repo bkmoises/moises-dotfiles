@@ -60,10 +60,6 @@ sudo apt install -y "${packages[@]}"
 echo "Setting Fish as the default shell"
 chsh -s /usr/bin/fish
 
-# Step 4: Install Oh My Fish
-echo "Installing Oh My Fish"
-curl -sL https://get.oh-my.fish | fish
-
 # Step 5: Install Fisher
 echo "Installing Fisher"
 fish -c "$(curl -Sl $FISHER_LINK | source && fisher install jorgebucaran/fisher)"

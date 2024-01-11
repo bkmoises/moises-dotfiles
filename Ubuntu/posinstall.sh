@@ -52,9 +52,6 @@ sudo apt install -y "${packages[@]}"
 # Configurar o Fish como shell padrão
 chsh -s /usr/bin/fish
 
-# Instalar Oh My Fish
-curl -L https://get.oh-my.fish | fish
-
 # Instalar Fisher
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 
