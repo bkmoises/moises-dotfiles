@@ -1,6 +1,7 @@
 alacritty
-bpytop cargo
+bpytop
 build-essential
+cargo
 curl
 discord
 firefox-developer-edition
@@ -12,7 +13,7 @@ make
 neovim
 nodejs
 npm
-omf 
+omf
 python-pip
 python3
 qbittorrent
