@@ -1,0 +1,2 @@
+dconf dump / >mysettings.conf
+cat mysettings.conf | dconf load
