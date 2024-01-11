@@ -13,4 +13,3 @@ fisher install jorgebucaran/autopair.fish
 fisher install nickeb96/puffer-fish
 fisher install patrickf1/colored_man_pages.fish
 fisher install ankitsumitg/docker-fish-completions
-
