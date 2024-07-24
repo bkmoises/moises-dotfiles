@@ -1,4 +1,4 @@
-source ./functions.sh
+source ../resources/functions.sh
 
 loading "Instalando pacotes"
 ./packages-install.sh
