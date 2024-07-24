@@ -37,10 +37,22 @@ packages=(
 	vlc
   bat
   exa
+  snapd
+  ffmpegthumbnailer
+  unar
+  jq
+  ripgrep
+  fzf
+  fd-find
+  zoxide
+  xclip
 )
 
 sudo apt install -y "${packages[@]}" 2> error.log
 
+sudo snap install spotify -y
+
 echo "Pacotes instalados com sucesso!"
 
 ./conf.sh
+loading "Configurações definidas com sucesso"
