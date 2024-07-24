@@ -20,8 +20,10 @@ packages=(
 	build-essential
 	cargo
 	curl
+  diodon
 	discord
 	fish
+  flameshot
 	fzf
 	make
 	neovim
@@ -30,7 +32,6 @@ packages=(
 	python-pip
 	python3
 	qbittorrent
-	yazi
 	rust
 	ssh
 	tig
@@ -41,6 +42,7 @@ packages=(
 	vlc
 	wget
 	yarn
+	yazi
 )
 
 # Atualizar lista de pacotes
