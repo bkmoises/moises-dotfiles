@@ -52,4 +52,8 @@ packages=(
 
 sudo apt install -y "${packages[@]}"
 
-sudo chsh -s /usr/bin/fish
+loading "Definindo shell padrão"
+
+FISH_PATH=$(which fish)
+
+sudo chsh -s $FISH_PATH $USER
