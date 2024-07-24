@@ -1,8 +1,5 @@
 #!/bin/bash
 
-source ./functions.sh
-
-loading "Atualizando sistema"
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt dist-upgrade -y
@@ -50,9 +47,6 @@ packages=(
 
 sudo apt install -y "${packages[@]}" 2> error.log
 
-sudo snap install spotify -y
+sudo snap install spotify --dangerous
 
 echo "Pacotes instalados com sucesso!"
-
-./conf.sh
-loading "Configurações definidas com sucesso"
