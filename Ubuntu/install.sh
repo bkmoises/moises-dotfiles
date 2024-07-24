@@ -1,4 +1,4 @@
 source ./functions.sh
 
-loading "Atualizando sistema"
+loading "Instalando pacotes"
 ./packages-install.sh
