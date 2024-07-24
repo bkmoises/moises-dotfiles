@@ -30,7 +30,7 @@ packages=(
 	python-pip
 	python3
 	qbittorrent
-	ranger
+	yazi
 	rust
 	ssh
 	tig

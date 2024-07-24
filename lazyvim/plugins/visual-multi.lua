@@ -1,3 +1,3 @@
 return {
-  { "mg979/vim-visual-multi" },
+  { "github/copilot.vim" },
 }
