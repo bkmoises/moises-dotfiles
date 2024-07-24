@@ -47,6 +47,13 @@ packages=(
 
 sudo apt install -y "${packages[@]}" 2> error.log
 
-sudo snap install spotify --dangerous
+echo "Instalando Spotify"
+sudo snap install spotify
+
+echo "Instalando Yazi"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+cargo install --locked yazi-fm yazi-cli
+cargo install --locked --git https://github.com/sxyazi/yazi.git yazi-fm yazi-cli
 
 echo "Pacotes instalados com sucesso!"

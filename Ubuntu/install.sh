@@ -5,4 +5,4 @@ loading "Instalando pacotes"
 loading "Aplicando configurações"
 ./conf.sh
 loading "Instalando fish plugins"
-../resources/fish/
+../resources/fish/fish_plugins_install.sh
