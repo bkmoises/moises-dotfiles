@@ -1,17 +1,6 @@
 #!/bin/bash
 
-function loading() {
-	local mensagem="$1"
-	local delay=0.5
-	local num_pontos=3
-
-	echo -n "$mensagem"
-	for ((i = 0; i < num_pontos; i++)); do
-		sleep $delay
-		echo -n "."
-	done
-	echo ""
-}
+source ./functions.sh
 
 loading "Atualizando sistema"
 sudo apt update -y
@@ -50,10 +39,8 @@ packages=(
   exa
 )
 
-sudo apt install -y "${packages[@]}"
+sudo apt install -y "${packages[@]}" 2> error.log
 
-loading "Definindo shell padrão"
+echo "Pacotes instalados com sucesso!"
 
-FISH_PATH=$(which fish)
-
-sudo chsh -s $FISH_PATH $USER
+./conf.sh
