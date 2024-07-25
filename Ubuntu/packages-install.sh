@@ -43,6 +43,8 @@ packages=(
   fd-find
   zoxide
   xclip
+  gnome-tweaks
+  gnome-shell-extensions
 )
 
 sudo apt install -y "${packages[@]}" 2> error.log
