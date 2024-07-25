@@ -1,7 +1,11 @@
 #!/bin/fish
 
+# Instalar OMF
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+# Instalar fisher
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 
+# Instalar plugins
 omf update
 omf install mars
 
@@ -13,3 +17,7 @@ fisher install jorgebucaran/autopair.fish
 fisher install nickeb96/puffer-fish
 fisher install patrickf1/colored_man_pages.fish
 fisher install ankitsumitg/docker-fish-completions
+
+# Substituir arquivo de configuração do fish
+rm ~/.config/fish/config.fish
+ln ../resources/fish/config.fish ~/.config/fish/config.fish
