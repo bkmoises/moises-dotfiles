@@ -8,12 +8,12 @@ if [ "$SYSTEM" == "ubuntu debian" ]; then
   loading "Instalando pacotes"
   ./Ubuntu/packages-install.sh
 
-  cat ./Ubuntu/mysettings.conf | dconf load
+  dconf load / < ./Ubuntu/mysettings.conf
 else
   ./Archlinux/posinstall.sh
 fi
 
-loading "Instalando fish plugins"
-./fish/fish_plugins_install.sh
+loading "Instalando Fish Plugins"
+./fish/fish-plugins-install.sh
 loading "Aplicando configurações"
 ./resources/conf.sh

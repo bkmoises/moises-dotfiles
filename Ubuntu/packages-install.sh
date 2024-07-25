@@ -51,7 +51,7 @@ echo "Instalando Spotify"
 sudo snap install spotify
 
 echo "Instalando Yazi"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 rustup update
 cargo install --locked yazi-fm yazi-cli
 cargo install --locked --git https://github.com/sxyazi/yazi.git yazi-fm yazi-cli
