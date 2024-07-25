@@ -17,3 +17,7 @@ loading "Instalando Fish Plugins"
 ./fish/fish-plugins-install.sh
 loading "Aplicando configurações"
 ./resources/conf.sh
+loading "Instalando fonte FiraCode"
+./resources/fonts/fira-code.sh
+loading "Instalando LazyVim"
+./lazyvim/lazy-install.sh
