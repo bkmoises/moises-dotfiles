@@ -6,8 +6,8 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 
 # Instalar plugins
-omf update
-omf install mars
+fish -c 'omf update'
+fish -c 'omf install mars'
 
 fisher install jethrokuan/z
 fisher install PatrickF1/fzf.fish
