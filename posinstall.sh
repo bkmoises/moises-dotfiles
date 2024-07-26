@@ -10,7 +10,9 @@ if [ "$SYSTEM" == "ubuntu debian" ]; then
 
   dconf load / <./Ubuntu/mysettings.conf
 
+  mkdir ~/.config/alacritty
   cp ./alacritty/alacritty.yml ~/.config/alacritty
+  cp -r ./.triggers/ ~/
 else
   ./Archlinux/posinstall.sh
 fi
