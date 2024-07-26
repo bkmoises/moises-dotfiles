@@ -21,4 +21,4 @@ fisher install ankitsumitg/docker-fish-completions
 # Substituir arquivo de configuração do fish
 rm ~/.config/fish/config.fish
 sleep 1
-ln ./config.fish ~/.config/fish/config.fish
+ln ./fish/config.fish ~/.config/fish/config.fish
