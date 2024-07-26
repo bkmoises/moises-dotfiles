@@ -171,8 +171,6 @@ return {
       { "folke/neodev.nvim" },
     },
     config = function()
-      -- This is where all the LSP shenanigans will live
-
       local lsp_zero = require("lsp-zero")
       lsp_zero.extend_lspconfig()
 
@@ -291,10 +289,10 @@ return {
         },
       })
 
-      require("neodev").setup({
-        -- see https://github.com/rcarriga/nvim-dap-ui
-        library = { plugins = { "nvim-dap-ui" }, types = true },
-      })
+      -- require("neodev").setup({
+      --   -- see https://github.com/rcarriga/nvim-dap-ui
+      --   library = { plugins = { "nvim-dap-ui" }, types = true },
+      -- })
       local lspconfig = require("lspconfig")
       local lspCapabilities = vim.lsp.protocol.make_client_capabilities()
       -- lspCapabilities.textDocument.completion.completionItem.snippetSupport = true

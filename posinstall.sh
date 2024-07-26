@@ -8,7 +8,7 @@ if [ "$SYSTEM" == "ubuntu debian" ]; then
   loading "Instalando pacotes"
   ./Ubuntu/packages-install.sh
 
-  dconf load / < ./Ubuntu/mysettings.conf
+  dconf load / <./Ubuntu/mysettings.conf
 
   cp ./alacritty/alacritty.yml ~/.config/alacritty
 else

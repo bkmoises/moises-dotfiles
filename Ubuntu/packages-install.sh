@@ -22,7 +22,6 @@ packages=(
 	unrar
 	unzip
 	wget
-	yarn
   bpytop
   diodon
 	alacritty
