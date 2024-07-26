@@ -1,7 +1,7 @@
 #!/bin/fish
 
 # Instalar OMF
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | bash
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 # Instalar fisher
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 

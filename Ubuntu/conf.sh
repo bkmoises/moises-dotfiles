@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Aplicar configurações do sistema
-dconf load / <./mysettings.conf
+dconf load / <./Ubuntu/mysettings.conf
 
 # Aplicar configuração do Alacritty
 mkdir ~/.config/alacritty
