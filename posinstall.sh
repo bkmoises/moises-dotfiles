@@ -9,6 +9,7 @@ if [ "$SYSTEM" == "ubuntu debian" ]; then
   ./Ubuntu/packages-install.sh
   loading "Aplicando Configurações"
   ./Ubuntu/conf.sh
+  sudo mv ./resources/monitor-controller /usr/bin/
 else
   ./Archlinux/posinstall.sh
 fi

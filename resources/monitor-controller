@@ -1,0 +1,14 @@
+#!/bin/bash
+
+MONITOR="eDP-1"
+
+STATE=$(xrandr --listactivemonitors | grep $MONITOR)
+
+if [ -z "$STATE" ]; then
+  xrandr --output $MONITOR --auto
+  echo "$MONITOR ligado"
+else
+  xrandr --output $MONITOR --off
+  echo "$MONITOR desligado"
+fi
+
