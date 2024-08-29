@@ -51,6 +51,7 @@ packages=(
   gnome-tweaks
   gnome-shell-extensions
   cmake
+  chafa
 )
 
 # Instalação dos pacotes
@@ -60,6 +61,11 @@ sudo apt install -y "${packages[@]}" 2>/tmp/error.log || error "Erro ao instalar
 # Instalação do Spotify via snap
 info "Instalando Spotify..."
 sudo snap install spotify || error "Erro ao instalar Spotify"
+
+# Instalação do Java 17
+sudo add-apt-repository ppa:linuxuprising/java -y || error "Erro ao adicionar repositório Java"
+sudo apt-get update -y || error "Erro ao atualizar repositórios"
+sudo apt-get install oracle-java17-installer oracle-java17-set-default || error "Erro ao instalar Java 17"
 
 # # Instalação do Yazi via cargo
 # info "Instalando Yazi..."
