@@ -2,7 +2,7 @@
 
 #TODO: inscluir o python3
 
-source ../resources/functions.sh
+source ./resources/functions.sh
 
 # Atualização e upgrade do sistema
 info "Atualizando e fazendo upgrade do sistema..."
