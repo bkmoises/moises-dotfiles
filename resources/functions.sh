@@ -1,12 +1,16 @@
-function loading() {
-	local mensagem="$1"
-	local delay=0.5
-	local num_pontos=3
+#!/bin/bash
 
-	echo -n "$mensagem"
-	for ((i = 0; i < num_pontos; i++)); do
-		sleep $delay
-		echo -n "."
-	done
-	echo ""
+BOLD="\e[1m"
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+RESET="\e[0m"
+
+error() {
+  echo -e "${BOLD}${RED}ERRO: $1${RESET}" 1>&2
+  exit 1
+}
+
+info() {
+  echo -e "${BOLD}${GREEN}$1${RESET}"
 }
