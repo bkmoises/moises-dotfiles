@@ -25,4 +25,5 @@ fisher install ankitsumitg/docker-fish-completions
 info "Aplicando configurações do fish"
 rm ~/.config/fish/config.fish
 sleep 1
-ln -sf ./.config/fish/config.fish ~/.config/fish/config.fish
+ln ./.config/fish/config.fish ~/.config/fish/config.fish
+source ~/.config/fish/config.fish
