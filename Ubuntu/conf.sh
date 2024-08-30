@@ -17,9 +17,9 @@ info "Aplicando configurações do Gnome Shell..."
 mkdir -p ~/.local/share/gnome-shell/extensions
 cp -r ./.local/share/gnome-shell/extensions/* ~/.local/share/gnome-shell/extensions/
 
-info "Aplicando configurações do qBittorrent..."
-mkdir -p ~/.config/qBittorrent
-cp -f ./.config/qBittorrent/* ~/.config/qBittorrent/
+info "Aplicando configurações do qbittorrent..."
+mkdir -p ~/.config/qbittorrent
+cp -f ./.config/qbittorrent/* ~/.config/qbittorrent/
 
 info "Aplicando configurações do Conky..."
 mkdir -p ~/.config/conky
@@ -38,6 +38,6 @@ sudo cp -f ./resources/monitor-controller /usr/bin/
 
 info "Aplicando Papel de Parede"
 mkdir -p ~/Imagens/"Papéis de parede"
-cp -r ../resources/"Papéis de parede"/* ~/Imagens/"Papéis de parede"/
+cp -r ./resources/"Papéis de parede"/* ~/Imagens/"Papéis de parede"/
 
-echo "Configurações aplicadas com sucesso!"
+info "Configurações aplicadas com sucesso!"
