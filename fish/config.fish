@@ -12,26 +12,28 @@ function yy
     rm -f -- "$tmp"
 end
 
-# ALIAS
-alias vi nvim
-alias ai aichat
-alias py python
-alias cat bat
-alias cls clear
-alias ls 'exa --icons --git'
-alias ws 'cmd.exe /c start'
+function gohere
+    xdg-open .
+end
 
-# PATH
 set -x EDITOR nvim
 set -x SSH_AGENT_PID (ssh-agent -c)
-set -x PATH $PATH /home/moisesreis/.local/bin /home/moisesreis/.cargo/bin $JAVA_HOME
-set -x JAVA_HOME /usr/lib/jvm/java-11-openjdk/
+set -x JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
+
+### Adicionar diretórios ao PATH
+fish_add_path /home/moisesreis/.local/bin
+fish_add_path /home/moisesreis/.cargo/bin
+fish_add_path /usr/bin/lua
+fish_add_path /usr/bin/luarocks
+fish_add_path $JAVA_HOME/bin
+
+### Variáveis de ambiente Trabalho
 # set -x DOWNLOAD /mnt/c/Users/brandm10/Downloads
 
-## Virutal Env Python
+### Virutal Env Python
 # set VIRTUAL_ENV /home/moisesreis/Projetos/access-control/env
 
-## Variávies Temporárias
+### Variávies Temporárias
 # set -x src /home/moisesreis/Work/unimedfesp-datalake/src/unimedfesp_datalake_apps/pipelines/datalake/
 # set -x ddl /home/moisesreis/Work/unimedfesp-datalake/ddl/datalake/table/
 
@@ -41,3 +43,18 @@ set -x JAVA_HOME /usr/lib/jvm/java-11-openjdk/
 
 # set -x download /mnt/c/Users/brandm10/Downloads
 # set -x screenshots '/mnt/c/Users/brandm10/OneDrive - Ingram Micro/Pictures/Screenshots'
+
+### Aliases
+alias vi nvim
+alias ai aichat
+alias py python
+alias cls clear
+alias ws 'cmd.exe /c start'
+
+### Debian Aliases
+alias cat batcat
+alias ls 'exa --icons'
+
+### Arch Aliases
+#alias cat bat
+#alias ls 'exa --icons --git'
