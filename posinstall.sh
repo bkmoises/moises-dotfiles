@@ -13,6 +13,6 @@ else
 fi
 
 ./general/fish-plugins-install.sh
-./resources/conf.sh
-./resources/fonts/fira-code.sh
-./lazyvim/lazy-install.sh
+./general/conf.sh
+./general/fonts/fira-code.sh
+./general/lazy-install.sh
