@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Conky Quatro Fusion
+GenericName=background monitor
+Comment=Keep a background eye on your time, now playing musics, Weather info and Date
+Terminal=false
+Type=Application
+Icon=conky
+Categories=System;
+StartupNotify=false
+Name[en_US]=Conky Quatro Fusion
+Exec=sh -c '/home/$USER/.config/conky/Regulus-MOD/start.sh'

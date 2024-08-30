@@ -28,6 +28,10 @@ info "Instalando o NodeJs..."
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - || error "Erro ao adicionar repositório do NodeJs"
 sudo apt install -y nodejs || error "Erro ao instalar NodeJs"
 
+info "Instalando o FZZ..."
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf || error "Erro ao clonar FZZ"
+~/.fzf/install
+
 info "Instalando Yazi..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y || error "Erro ao instalar Rust"
 ~/.cargo/bin/rustup update || error "Erro ao atualizar Rust"
