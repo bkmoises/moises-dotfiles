@@ -2,12 +2,31 @@
 
 source ./resources/functions.sh
 
-sudo apt install python3-pip -y || error "Erro ao instalar Python3-pip"
+extras=(
+  python3-pip
+  python3.10-venv
+  openjdk-17-jdk
+  playerctl
+  chafa
+  ffmpegthumbnailer
+  zoxide
+  libxcb1-dev
+  libxcb-image0-dev
+  libxcb-res0-dev
+  libopencv-dev
+)
 
-# # Instalação do Yazi via cargo
+info "Instalando extras..."
+sudo apt install -y "${extras[@]}" 2>/tmp/error.log || error "Erro ao instalar extras. Verifique error.log para mais detalhes."
+
+info "Instalando a versão mais recente do NVIM..."
+wget -P /tmp https://github.com/neovim/neovim/releases/latest/download/nvim.appimage || error "Erro ao baixar NVIM"
+chmod u+x /tmp/nvim.appimage
+sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
+
 info "Instalando Yazi..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y || error "Erro ao instalar Rust"
-rustup update || error "Erro ao atualizar Rust"
+~/.cargo/bin/rustup update || error "Erro ao atualizar Rust"
 cargo install --locked yazi-fm yazi-cli || error "Erro ao instalar Yazi"
 cargo install --locked --git https://github.com/sxyazi/yazi.git yazi-fm yazi-cli || error "Erro ao instalar Yazi via Git"
 

@@ -41,17 +41,14 @@ packages=(
   bat
   exa
   snapd
-  ffmpegthumbnailer
   unar
   jq
   ripgrep
   fd-find
-  zoxide
   xclip
   gnome-tweaks
   gnome-shell-extensions
   cmake
-  chafa
 )
 
 # Instalação dos pacotes
@@ -67,12 +64,5 @@ info "Instalando Java 17..."
 sudo add-apt-repository ppa:linuxuprising/java -y || error "Erro ao adicionar repositório Java"
 sudo apt-get update -y || error "Erro ao atualizar repositórios"
 sudo apt-get install oracle-java17-installer oracle-java17-set-default -y || error "Erro ao instalar Java 17"
-
-# # Instalação do Yazi via cargo
-# info "Instalando Yazi..."
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y || error "Erro ao instalar Rust"
-# rustup update || error "Erro ao atualizar Rust"
-# cargo install --locked yazi-fm yazi-cli || error "Erro ao instalar Yazi"
-# cargo install --locked --git https://github.com/sxyazi/yazi.git yazi-fm yazi-cli || error "Erro ao instalar Yazi via Git"
 
 info "Pacotes instalados com sucesso!"
