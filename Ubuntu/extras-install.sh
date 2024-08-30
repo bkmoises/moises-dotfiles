@@ -24,6 +24,10 @@ wget -P /tmp https://github.com/neovim/neovim/releases/latest/download/nvim.appi
 chmod u+x /tmp/nvim.appimage
 sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
 
+info "Instalando o NodeJs..."
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - || error "Erro ao adicionar repositório do NodeJs"
+sudo apt install -y nodejs || error "Erro ao instalar NodeJs"
+
 info "Instalando Yazi..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y || error "Erro ao instalar Rust"
 ~/.cargo/bin/rustup update || error "Erro ao atualizar Rust"

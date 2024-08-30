@@ -15,7 +15,6 @@ sudo apt autoremove -y || error "Erro ao executar apt autoremove"
 packages=(
   build-essential
   cargo
-  nodejs
   npm
   python3
   python-pip
