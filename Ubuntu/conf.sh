@@ -11,7 +11,7 @@ cp -f ./.config/alacritty/* ~/.config/alacritty/
 
 info "Aplicando configurações do Flameshot..."
 mkdir -p ~/.config/flameshot
-cp -f ./.config/flameshot/flameshot.ini ~/.config/flameshot/
+cp -f ./.config/flameshot/* ~/.config/flameshot/
 
 info "Aplicando configurações do Gnome Shell..."
 mkdir -p ~/.local/share/gnome-shell/extensions
@@ -19,7 +19,7 @@ cp -r ./.local/share/gnome-shell/extensions/* ~/.local/share/gnome-shell/extensi
 
 info "Aplicando configurações do qBittorrent..."
 mkdir -p ~/.config/qBittorrent
-cp -f ./.config/qBittorrent/qBittorrent.conf ~/.config/qBittorrent/
+cp -f ./.config/qBittorrent/* ~/.config/qBittorrent/
 
 info "Aplicando configurações do Conky..."
 mkdir -p ~/.config/conky

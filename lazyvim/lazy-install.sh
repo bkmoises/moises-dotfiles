@@ -37,3 +37,27 @@ sudo gem install neovim
 
 # Instalar Yarn
 sudo npm install -g yarn
+
+#TODO: instalar o jsregexp
+# sudo luarocks install jsregexp
+#
+# #TODO:
+# pip install hererocks
+# hererocks ~/.local/share/nvim/lazy-rocks --lua=5.1 -r latest
+#
+# sudo luarocks install jsregexp
+#
+# #TODO: instalador lazyvim
+# mv ~/.config/nvim{,.bak}
+#
+# mv ~/.local/share/nvim{,.bak}
+# mv ~/.local/state/nvim{,.bak}
+# mv ~/.cache/nvim{,.bak}
+#
+# git clone https://github.com/LazyVim/starter ~/.config/nvim
+#
+# rm -rf ~/.config/nvim/.git
+#
+#
+#
+# cargo install viu
