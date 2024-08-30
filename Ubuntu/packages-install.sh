@@ -63,9 +63,10 @@ info "Instalando Spotify..."
 sudo snap install spotify || error "Erro ao instalar Spotify"
 
 # Instalação do Java 17
+info "Instalando Java 17..."
 sudo add-apt-repository ppa:linuxuprising/java -y || error "Erro ao adicionar repositório Java"
 sudo apt-get update -y || error "Erro ao atualizar repositórios"
-sudo apt-get install oracle-java17-installer oracle-java17-set-default || error "Erro ao instalar Java 17"
+sudo apt-get install oracle-java17-installer oracle-java17-set-default -y || error "Erro ao instalar Java 17"
 
 # # Instalação do Yazi via cargo
 # info "Instalando Yazi..."
