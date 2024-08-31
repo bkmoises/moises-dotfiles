@@ -17,10 +17,15 @@ info "Instalando dependências via npm"
 sudo npm install -g tree-sitter-cli
 sudo npm install -g neovim
 sudo npm install -g yarn
+sudo npm install -g markdown-toc
+sudo npm install -g markdownlint-cli2
+sudo npm install -g prettier
 
 info "Instalando dependências via pip"
 pip3 install pynvim
 pip install hererocks
+pip install black
+pip install sqlfluff
 
 info "Instalando dependências via hererocks"
 hererocks ~/.local/share/nvim/lazy-rocks --lua=5.1 -r latest
@@ -34,7 +39,7 @@ sudo luarocks install jsregexp
 info "Instalando dependências via cargo"
 cargo install viu
 
-info "Instalando dependências Lazygit"
+info "Instalando Lazygit"
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
