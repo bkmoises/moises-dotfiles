@@ -4,6 +4,7 @@ source ./resources/functions.sh
 
 extras=(
   python3-pip
+  pip
   python3.10-venv
   openjdk-17-jdk
   conky

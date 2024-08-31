@@ -28,7 +28,7 @@ pip install black
 pip install sqlfluff
 
 info "Instalando dependências via hererocks"
-hererocks ~/.local/share/nvim/lazy-rocks --lua=5.1 -r latest
+~/.local/bin/hererocks ~/.local/share/nvim/lazy-rocks --lua=5.1 -r latest
 
 info "Instalando dependências via gem"
 sudo gem install neovim
