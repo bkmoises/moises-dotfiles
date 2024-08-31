@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/bin/bash
 
 source ./resources/functions.sh
 
@@ -13,17 +13,17 @@ fish -c "omf update"
 fish -c "omf install mars"
 
 info "Instalando plugins do Fisher"
-fisher install jethrokuan/z
-fisher install PatrickF1/fzf.fish
-fisher install rstacruz/fish-asdf
-fisher install gazorby/fish-abbreviation-tips
-fisher install jorgebucaran/autopair.fish
-fisher install nickeb96/puffer-fish
-fisher install patrickf1/colored_man_pages.fish
-fisher install ankitsumitg/docker-fish-completions
+fish -c "fisher install jethrokuan/z"
+fish -c "fisher install PatrickF1/fzf.fish"
+fish -c "fisher install rstacruz/fish-asdf"
+fish -c "fisher install gazorby/fish-abbreviation-tips"
+fish -c "fisher install jorgebucaran/autopair.fish"
+fish -c "fisher install nickeb96/puffer-fish"
+fish -c "fisher install patrickf1/colored_man_pages.fish"
+fish -c "fisher install ankitsumitg/docker-fish-completions"
 
 info "Aplicando configurações do fish"
 rm ~/.config/fish/config.fish
 sleep 1
 ln ./.config/fish/config.fish ~/.config/fish/config.fish
-source ~/.config/fish/config.fish
+fish -c "source ~/.config/fish/config.fish"
