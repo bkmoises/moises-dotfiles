@@ -6,7 +6,6 @@ extras=(
   python3-pip
   python3.10-venv
   openjdk-17-jdk
-  luarocks
   conky
   playerctl
   chafa

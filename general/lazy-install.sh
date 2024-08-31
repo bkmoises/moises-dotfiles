@@ -11,7 +11,7 @@ rm -rf ~/.config/nvim/lua/config ~/.config/nvim/lua/plugins
 cp -rf ./.config/nvim/* ~/.config/nvim/lua/
 
 info "Instalando dependências via apt"
-sudo apt install -y php ruby julia ruby-full golang php-cli liblua5.1-0-dev xclip
+sudo apt install -y php ruby julia ruby-full golang php-cli liblua5.1-0-dev xclip luarocks yarn
 
 info "Instalando dependências via npm"
 sudo npm install -g tree-sitter-cli
@@ -20,9 +20,19 @@ sudo npm install -g yarn
 
 info "Instalando dependências via pip"
 pip3 install pynvim
+pip install hererocks
+
+info "Instalando dependências via hererocks"
+hererocks ~/.local/share/nvim/lazy-rocks --lua=5.1 -r latest
 
 info "Instalando dependências via gem"
 sudo gem install neovim
+
+info "Instalando dependências via luarocks"
+sudo luarocks install jsregexp
+
+info "Instalando dependências via cargo"
+cargo install viu
 
 info "Instalando dependências Lazygit"
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -33,16 +43,3 @@ sudo install lazygit /usr/local/bin
 info "Instalando composer"
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-
-# Instalar Yarn
-
-#TODO: instalar o jsregexp
-# sudo luarocks install jsregexp
-#
-# #TODO:
-# pip install hererocks
-# hererocks ~/.local/share/nvim/lazy-rocks --lua=5.1 -r latest
-#
-# sudo luarocks install jsregexp
-#
-# cargo install viu
