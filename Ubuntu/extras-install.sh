@@ -2,9 +2,16 @@
 
 source ./resources/functions.sh
 
+sudo apt autoremove -y
+
+info "Adicionando repositório de Java..."
 sudo add-apt-repository ppa:linuxuprising/java -y || error "Erro ao adicionar repositório Java"
 
+info "Adicionando repositório de Nodejs..."
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - || error "Erro ao adicionar repositório do NodeJs"
+
 extras=(
+  nodejs
   python3-pip
   pip
   python3.10-venv
@@ -27,10 +34,6 @@ info "Instalando a versão mais recente do NVIM..."
 wget -P /tmp https://github.com/neovim/neovim/releases/latest/download/nvim.appimage || error "Erro ao baixar NVIM"
 chmod u+x /tmp/nvim.appimage
 sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
-
-info "Instalando o NodeJs..."
-curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - || error "Erro ao adicionar repositório do NodeJs"
-sudo apt install -y nodejs || error "Erro ao instalar NodeJs"
 
 info "Instalando Java 17..."
 sudo apt-get install oracle-java17-installer oracle-java17-set-default -y || error "Erro ao instalar Java 17"
