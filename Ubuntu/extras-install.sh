@@ -2,6 +2,8 @@
 
 source ./resources/functions.sh
 
+sudo add-apt-repository ppa:linuxuprising/java -y || error "Erro ao adicionar repositório Java"
+
 extras=(
   python3-pip
   pip
@@ -29,6 +31,9 @@ sudo mv /tmp/nvim.appimage /usr/local/bin/nvim
 info "Instalando o NodeJs..."
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - || error "Erro ao adicionar repositório do NodeJs"
 sudo apt install -y nodejs || error "Erro ao instalar NodeJs"
+
+info "Instalando Java 17..."
+sudo apt-get install oracle-java17-installer oracle-java17-set-default -y || error "Erro ao instalar Java 17"
 
 info "Instalando o FZZ..."
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf || error "Erro ao clonar FZZ"
