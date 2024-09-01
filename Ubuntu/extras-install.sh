@@ -2,7 +2,7 @@
 
 source ./resources/functions.sh
 
-sudo apt autoremove -y
+sudo apt remove libnode-dev -y
 
 info "Adicionando repositório de Java..."
 sudo add-apt-repository ppa:linuxuprising/java -y || error "Erro ao adicionar repositório Java"
